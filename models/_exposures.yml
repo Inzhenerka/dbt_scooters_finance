@@ -1,0 +1,13 @@
+version: 2
+
+exposures:
+  - name: output_data
+    label: Processed fincancial data for reporting
+    type: analysis
+    maturity: medium
+    description: Dumped CSV files with table data
+    depends_on:
+      - ref('costs_breakdown')
+      - ref('profit')
+    owner:
+      name: Finance department

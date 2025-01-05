@@ -20,6 +20,9 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Build project for validation
+        run: dbt build
+
       - name: Generate docs
         run: dbt docs generate
 

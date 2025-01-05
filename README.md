@@ -2,7 +2,7 @@
 
 Этот проект демонстрирует, как использовать dbt и DuckDB для локального анализа чувствительных финансовых данных.
 
-Исходные данные хранятся в файле `finance_data/rates.xlsx`. Этот файл содержит затраты кикшеринговой компании "Каталкин" на обслуживание самокатов и поддержание работы.
+Исходные данные хранятся в файле `finance_data/costs.xlsx`. Этот файл содержит затраты кикшеринговой компании "Каталкин" на обслуживание самокатов и поддержание работы.
 
 Статистика поездок и выручки подгружается из parquet-файла, который хранится в S3.
 
@@ -43,5 +43,5 @@ chmod +x post_commands.sh
 DuckDB позволяет удобно конвертировать данные между поддерживаемыми форматами:
 
 ```bash
-duckdb -c "INSTALL spatial; LOAD spatial; COPY (FROM st_read('finance_data/rates.xlsx')) TO 'finance_data/rates.csv';"
+duckdb -c "INSTALL spatial; LOAD spatial; COPY (FROM st_read('finance_data/costs.xlsx')) TO 'finance_data/costs.csv';"
 ```

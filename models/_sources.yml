@@ -6,8 +6,8 @@ sources:
     meta:
       external_location: "finance_data/{name}.csv"
     tables:
-      - name: rates
-        description: Financial costs and rates
+      - name: costs
+        description: Financial costs by month and category
 
   - name: s3
     description: Scooters historical data stored in remote S3 bucket

@@ -4,9 +4,9 @@ INTO
     NAME title
     VALUE cost_rub
 UNION ALL
-UNPIVOT {{ ref("company_costs") }}
+UNPIVOT {{ ref("organization_costs") }}
 ON staff_cost, office_cost, it_cost
 INTO
     NAME title
     VALUE cost_rub
-ORDER BY 1, 2
+ORDER BY ALL

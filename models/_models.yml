@@ -7,34 +7,28 @@ models:
       - unique_key:
           columns: [ month ]
 
-  - name: trips_rates
-    description: Monthly statistics of scooter trips joined with financial rates
-    data_tests:
-      - unique_key:
-          columns: [ month ]
-
   - name: scooters_costs
     description: Monthly costs of scooter operations
     data_tests:
       - unique_key:
           columns: [ month ]
 
-  - name: company_costs
+  - name: organization_costs
     description: Monthly costs of company operations
     data_tests:
       - unique_key:
           columns: [ month ]
 
-  - name: all_costs
+  - name: costs_breakdown
     description: Detalization of monthly costs of company and scooter operations
     config:
       materialized: 'external'
-      location: 'output_data/all_costs.csv'
+      location: 'output_data/costs_breakdown.csv'
     data_tests:
       - unique_key:
           columns: [ month, title ]
 
-  - name: total_costs
+  - name: costs_summary
     description: Summarized monthly costs of company and scooter operations
     data_tests:
       - unique_key:
