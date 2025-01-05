@@ -1,0 +1,4 @@
+month,scooter_price,scooter_lifetime_km,maintenance_per_km,electricity_per_km,staff_price,office_price,it_price
+2023-06-01,250000,10000,2.0,1,2000000,450000,100000
+2023-07-01,250000,10000,1.9,1,2200000,500000,110000
+2023-08-01,270000,10000,1.8,1,3000000,500000,90000

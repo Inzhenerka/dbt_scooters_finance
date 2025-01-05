@@ -1,0 +1,14 @@
+name: 'dbt_scooters_finance'
+version: '1.0.0'
+
+profile: 'dbt_scooters_finance'
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+
+clean-targets:
+  - "target"
+
+models:
+  dbt_scooters_finance:
+    +materialized: table

@@ -1,0 +1,8 @@
+dbt_scooters_finance:
+  outputs:
+    dev:
+      type: duckdb
+      threads: 1
+      # path: ~/dbt.duckdb
+
+  target: dev
