@@ -4,6 +4,7 @@ version: '1.0.0'
 profile: 'dbt_scooters_finance'
 
 model-paths: ["models"]
+test-paths: ["tests"]
 macro-paths: ["macros"]
 
 clean-targets:

@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: finance_data
+    description: Local financial data stored in CSV-files
+    meta:
+      external_location: "finance_data/{name}.csv"
+    tables:
+      - name: rates
+        description: Financial costs and rates
+
+  - name: s3
+    description: Scooters historical data stored in remote S3 bucket
+    meta:
+      external_location: "s3://inzhenerka-public/scooters_data_generator/{name}.parquet"
+    tables:
+      - name: trips
+        description: Scooter trips
