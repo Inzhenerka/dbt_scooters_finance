@@ -28,12 +28,6 @@ models:
       - unique_key:
           columns: [ month, title ]
 
-  - name: costs_summary
-    description: Summarized monthly costs of company and scooter operations
-    data_tests:
-      - unique_key:
-          columns: [ month ]
-
   - name: profit
     description: Final financial overview with costs, revenue and profit
     config:
