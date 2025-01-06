@@ -4,5 +4,5 @@ SELECT
     distance_km * electricity_per_km AS electricity_cost,
     distance_km * maintenance_per_km AS maintenance_cost
 FROM {{ ref('trips_monthly')}}
-LEFT JOIN {{ source('finance_data', 'costs')}}
+JOIN {{ source('finance_data', 'costs')}}
     USING ("month")

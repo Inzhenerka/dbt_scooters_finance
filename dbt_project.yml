@@ -1,14 +1,14 @@
-name: 'dbt_scooters_finance'
-version: '1.0.0'
+name: dbt_scooters_finance
+version: "1.0.0"
 
-profile: 'dbt_scooters_finance'
+profile: dbt_scooters_finance
 
-model-paths: ["models"]
-test-paths: ["tests"]
-macro-paths: ["macros"]
+model-paths: [models]
+test-paths: [tests]
+macro-paths: [macros]
 
 clean-targets:
-  - "target"
+  - target
 
 models:
   dbt_scooters_finance:

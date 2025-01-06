@@ -21,18 +21,18 @@ models:
 
   - name: costs_breakdown
     description: Detalization of monthly costs of company and scooter operations
-    config:
-      materialized: 'external'
-      location: 'output_data/costs_breakdown.csv'
     data_tests:
       - unique_key:
           columns: [ month, title ]
+    config:
+      materialized: external
+      location: output_data/costs_breakdown.csv
 
   - name: profit
     description: Final financial overview with costs, revenue and profit
-    config:
-      materialized: 'external'
-      location: 'output_data/profit.csv'
     data_tests:
       - unique_key:
           columns: [ month ]
+    config:
+      materialized: external
+      location: output_data/profit.csv
