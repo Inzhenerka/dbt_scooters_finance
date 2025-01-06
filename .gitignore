@@ -3,3 +3,4 @@ target
 logs
 .user.yml
 ~$*.xlsx
+output_data
